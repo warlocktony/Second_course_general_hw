@@ -12,53 +12,22 @@ public class Slizerine extends Hogwarts {
         this.ambitions = ambitions;
         this.resourcefulness = resourcefulness;
         this.lustForPower = lustForPower;
-    }
 
-    public int allPointsSlizerine() {
-        return trick + determination + ambitions + resourcefulness + lustForPower;
     }
+    public  String toString(){
+        return super.toString() + " trick = " + this.trick + " determination = " + this.determination + " ambitions = "
+                + this.ambitions + " resourcefulness = " + this.resourcefulness + " lust for power = " + this.lustForPower;
 
-    public int getTrick() {
-        return this.trick;
     }
-
-    public int getDetermination() {
-        return this.determination;
-    }
-
-    public int getAmbitions() {
-        return this.ambitions;
-    }
-
-    public int getResourcefulness() {
-        return this.resourcefulness;
-    }
-
-    public int getLustForPower() {
-        return this.lustForPower;
-    }
-
-    public void setTrick(int trick) {
-        this.trick = trick;
-    }
-
-    public void setDetermination(int determination) {
-        this.determination = determination;
-    }
-
-    public void setAmbitions(int ambitions) {
-        this.ambitions = ambitions;
-    }
-
-    public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
-    }
-
-    public void setLustForPower(int lustForPower) {
-        this.lustForPower = lustForPower;
-    }
-
-    public String toStringSlizerine() {
-        return "Trick=" + this.trick + " Determination=" + this.determination + " Ambitions=" + this.ambitions + " Resourcefulness=" + this.resourcefulness + " Lust for Power=" + this.lustForPower;
+    public void compareTwoStudentsSlizerine(Slizerine other) {
+        int firstStudent = this.trick + this.determination + this.ambitions + this.resourcefulness + this.lustForPower;
+        int otherStudent = other.trick + other.determination + other.ambitions + other.resourcefulness + other.lustForPower;
+        if (firstStudent > otherStudent) {
+            System.out.println(this.getNameOfStudents() + " better student of Slizerins than " + other.getNameOfStudents());
+        } else if (firstStudent < otherStudent) {
+            System.out.println(other.getNameOfStudents() + " better student of Slizerins than " + this.getNameOfStudents());
+        } else {
+            System.out.println("This students are equals!");
+        }
     }
 }

@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts  {
     private String nameOfStudents;
     private int powerOfMagick;
     private int transgressionDistanceKm;
@@ -9,39 +9,26 @@ public class Hogwarts {
         this.powerOfMagick = powerOfMagick;
         this.transgressionDistanceKm = transgressionDistanceKm;
         this.faculty = faculty;
-
     }
 
-    public int allPointBase() {
-        return powerOfMagick + transgressionDistanceKm;
+    public String toString(){
+        return "name - " + this.nameOfStudents + " facelty - " +  this.faculty + " magick = " + this.powerOfMagick
+                + " transgression = " + this.transgressionDistanceKm + ";";
     }
-
-    public String getNameOfStudents() {
-        return this.nameOfStudents;
+    public String getNameOfStudents(){
+        return nameOfStudents;
     }
-
-    public int getPowerOfMagick() {
-        return this.powerOfMagick;
+    public void compareTwoStudentsHogwarts(Hogwarts other){
+        int allPointsOne = this.powerOfMagick + this.transgressionDistanceKm;
+        int allPointsTwo = other.powerOfMagick + other.transgressionDistanceKm;
+        if (allPointsOne>allPointsTwo){
+            System.out.println(this.nameOfStudents + " have big power of magick than " + other.nameOfStudents);
+        } else if (allPointsOne<allPointsTwo) {
+            System.out.println(other.nameOfStudents + " have big power of magick than " + this.nameOfStudents);
+        }else {
+            System.out.println("They are equals!");
+        }
     }
-
-    public int getTransgressionDistanceKm() {
-        return this.transgressionDistanceKm;
-    }
-
-    public void setPowerOfMagick(int powerOfMagick) {
-        this.powerOfMagick = powerOfMagick;
-    }
-
-    public void setTransgressionDistanceKm(int transgressionDistanceKm) {
-        this.transgressionDistanceKm = transgressionDistanceKm;
-    }
-
-    public String getFaculty() {
-        return this.faculty;
-    }
-
-    public String toStringHogwarts() {
-        return "Name- " + this.nameOfStudents + " Magick power=" + this.powerOfMagick + " Transgression KM=" + this.transgressionDistanceKm + " Faculty- " + this.faculty;
-    }
-
 }
+
+

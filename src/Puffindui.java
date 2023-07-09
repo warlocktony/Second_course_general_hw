@@ -8,38 +8,22 @@ public class Puffindui extends Hogwarts {
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
-    }
 
-    public int allPointsPuffindui() {
-        return industriousness + loyalty + honesty;
     }
-
-    public int getIndustriousness() {
-        return this.industriousness;
+    public String toString(){
+        return super.toString() + " industriousness = " + this.industriousness  + " loyalty = " + this.loyalty
+                + " honesty = " + this.honesty;
     }
-
-    public int getLoyalty() {
-        return this.loyalty;
-    }
-
-    public int getHonesty() {
-        return this.honesty;
-    }
-
-    public void setIndustriousness(int industriousness) {
-        this.industriousness = industriousness;
-    }
-
-    public void setLoyalty(int loyalty) {
-        this.loyalty = loyalty;
-    }
-
-    public void setHonesty(int honesty) {
-        this.honesty = honesty;
-    }
-
-    public String toStringPuffindui() {
-        return "Industriousness=" + this.industriousness + " Loyalty=" + this.loyalty + " Honesty=" + this.honesty;
+    public void compareTwoStudentsPuffindui(Puffindui other) {
+        int firstStudent = this.industriousness + this.loyalty + this.honesty;
+        int otherStudent = other.industriousness + other.loyalty + other.honesty;
+        if (firstStudent > otherStudent) {
+            System.out.println(this.getNameOfStudents() + " better student of Puffinduis than " + other.getNameOfStudents());
+        } else if (firstStudent < otherStudent) {
+            System.out.println(other.getNameOfStudents() + " better student of Puffinduis than " + this.getNameOfStudents());
+        } else {
+            System.out.println("This students are equals!");
+        }
     }
 
 }

@@ -10,46 +10,21 @@ public class Coktevran extends Hogwarts {
         this.wise = wise;
         this.wit = wit;
         this.creativity = creativity;
-    }
 
-    public int allPointsCoktevran() {
-        return smart + wise + wit + creativity;
     }
-
-    public int getSmart() {
-        return this.smart;
+    public String toString(){
+        return super.toString() + " smart = " + this.smart + " wise = " + this.wise + " wit = " + this.wit
+                + " creativity = " + this.creativity;
     }
-
-    public int getWise() {
-        return this.wise;
+    public void compareTwoStudentsCoktevran(Coktevran other) {
+        int firstStudent = this.smart + this.wise + this.wit + this.creativity;
+        int otherStudent = other.smart + other.wise + other.wit + this.creativity;
+        if (firstStudent > otherStudent) {
+            System.out.println(this.getNameOfStudents() + " better student of Coktevrans than " + other.getNameOfStudents());
+        } else if (firstStudent < otherStudent) {
+            System.out.println(other.getNameOfStudents() + " better student of Coktevrans than " + this.getNameOfStudents());
+        } else {
+            System.out.println("This students are equals!");
+        }
     }
-
-    public int getWit() {
-        return this.wit;
-    }
-
-    public int getCreativity() {
-        return this.creativity;
-    }
-
-    public void setSmart(int smart) {
-        this.smart = smart;
-    }
-
-    public void setWise(int wise) {
-        this.wise = wise;
-    }
-
-    public void setWit(int wit) {
-        this.wit = wit;
-    }
-
-    public void setCreativity(int creativity) {
-        this.creativity = creativity;
-    }
-
-    public String toStringCoktevran() {
-        return "Smart=" + this.smart + " Wise=" + this.wise + " Wit=" + this.wit + " Creativity=" + this.creativity;
-    }
-
 }
